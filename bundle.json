@@ -1,21 +1,18 @@
 {
-    "id":"a45e642b-4828-4420-8c26-ba1051752805",
+    "id":"12ed1f97-62b2-428a-b20d-42f40f6d513a",
     "author":"eutech",
     "widgets":[
         {
-            "id":"space-occupancy-analytics",
-            "title":"Space Occupancy Analytics",
-            "description":"Occupancy visualizations for spaces"
-        },
+            "id":"room-booking-action",
+            "title":"Room Booking Action",
+            "description":"An action to book a room"
+        }
+    ],
+    "sidebarLinks":[
         {
-            "id":"space-occupancy-analytics-display",
-            "title":"Space Occupancy Analytics Display",
-            "description":"Occupancy visualizations for spaces"
-        },
-        {
-            "id":"space-utilization",
-            "title":"Space Utilization",
-            "description":"Occupancy visualizations for spaces"
+            "id":"room-booking-link",
+            "label":"Book a Room",
+            "description":"Book a meeting"
         }
     ]
 }

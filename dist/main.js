@@ -90,10 +90,10 @@
 /*!*********************!*\
   !*** ./bundle.json ***!
   \*********************/
-/*! exports provided: id, author, widgets, default */
+/*! exports provided: id, author, widgets, sidebarLinks, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"id\":\"a45e642b-4828-4420-8c26-ba1051752805\",\"author\":\"eutech\",\"widgets\":[{\"id\":\"space-occupancy-analytics\",\"title\":\"Space Occupancy Analytics\",\"description\":\"Occupancy visualizations for spaces\"},{\"id\":\"space-occupancy-analytics-display\",\"title\":\"Space Occupancy Analytics Display\",\"description\":\"Occupancy visualizations for spaces\"},{\"id\":\"space-utilization\",\"title\":\"Space Utilization\",\"description\":\"Occupancy visualizations for spaces\"}]}");
+module.exports = JSON.parse("{\"id\":\"12ed1f97-62b2-428a-b20d-42f40f6d513a\",\"author\":\"eutech\",\"widgets\":[{\"id\":\"room-booking-action\",\"title\":\"Room Booking Action\",\"description\":\"An action to book a room\"}],\"sidebarLinks\":[{\"id\":\"room-booking-link\",\"label\":\"Book a Room\",\"description\":\"Book a meeting\"}]}");
 
 /***/ }),
 
@@ -310,12 +310,9 @@ module.exports = function () {
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
-var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ./level-logo.svg */ "./src/level-logo.svg");
 exports = ___CSS_LOADER_API_IMPORT___(false);
-var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-exports.push([module.i, ".spa #uxp-map-component-container::after {\n  content: \"\";\n  display: block;\n  position: absolute;\n  left: 0px;\n  right: 0px;\n  z-index: 2000;\n  top: 0px;\n  bottom: 0px;\n  background-color: rgba(135, 219, 207, 0.15);\n  pointer-events: none; }\n\n.spa .nomap {\n  font-size: 2em;\n  color: gray;\n  text-align: center;\n  position: absolute;\n  left: 0px;\n  right: 0px;\n  top: 50%; }\n\n.spa .header {\n  position: absolute;\n  top: 12px;\n  left: 50px;\n  background-color: rgba(255, 255, 255, 0.7);\n  -webkit-backdrop-filter: blur(8px);\n  backdrop-filter: blur(5px);\n  border-radius: 10px;\n  padding: 15px 30px;\n  box-shadow: 1px 2px 10px #00000070;\n  display: flex;\n  align-items: center;\n  z-index: 1000; }\n  .spa .header.list {\n    left: 12px; }\n\n.spa .toolbar {\n  background-color: rgba(255, 255, 255, 0.7);\n  -webkit-backdrop-filter: blur(8px);\n  backdrop-filter: blur(5px);\n  border-radius: 10px;\n  padding: 0 10px;\n  box-shadow: 1px 2px 10px #00000070;\n  position: absolute;\n  right: 12px;\n  top: 12px;\n  display: flex;\n  align-items: center;\n  z-index: 1000; }\n  .spa .toolbar .level-logo {\n    width: 25px;\n    height: 25px;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-position: center;\n    background-size: 25px;\n    margin-right: 10px;\n    margin-left: 10px; }\n  .spa .toolbar .date-label {\n    background-color: rgba(127, 127, 127, 0.2);\n    cursor: pointer;\n    padding: 5px 10px;\n    border-radius: 10px;\n    width: 200px;\n    text-align: center;\n    margin-right: 10px;\n    font-size: 0.9em; }\n  .spa .toolbar .date-button {\n    width: 20px;\n    height: 20px; }\n\n.spa .legend-bar {\n  display: flex;\n  position: absolute;\n  left: 20px;\n  bottom: 20px;\n  align-items: center;\n  z-index: 1000; }\n  .spa .legend-bar .legend-status {\n    align-items: center;\n    margin-left: 20px;\n    color: white;\n    background-color: #424242;\n    padding: 10px 20px;\n    border-radius: 15px;\n    display: flex;\n    box-shadow: 0px 7px 11px #00000074;\n    font-size: 0.8em; }\n    .spa .legend-bar .legend-status .color {\n      width: 10px;\n      height: 10px;\n      border-radius: 50%;\n      margin-right: 10px; }\n\n.spa .list-cont {\n  padding-top: 90px;\n  padding-bottom: 50px;\n  width: 100%;\n  height: 95%; }\n  .spa .list-cont .occupancy-list .data-list .data-table thead tr th:first-child {\n    text-align: left;\n    padding-left: 20px; }\n  .spa .list-cont .occupancy-list .data-list .data-table .data-list-item td:not(:first-child) {\n    text-align: center; }\n  .spa .list-cont .occupancy-list .data-list .data-table .data-list-item td div {\n    width: 100%;\n    height: auto;\n    border: 1px solid transparent;\n    padding: 10px; }\n    .spa .list-cont .occupancy-list .data-list .data-table .data-list-item td div.percentage {\n      display: flex;\n      align-items: center;\n      justify-content: center; }\n      .spa .list-cont .occupancy-list .data-list .data-table .data-list-item td div.percentage div {\n        width: 60px;\n        height: auto;\n        color: white;\n        border-radius: 6px;\n        padding: 5px; }\n  .spa .list-cont .occupancy-list .data-list .data-table .data-list-item td:first-child div {\n    padding-left: 20px; }\n\n.spa.display .toolbar {\n  display: none; }\n\n.space-icon div {\n  width: 40px;\n  height: 40px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n  font-size: 16px;\n  font-weight: bold;\n  color: white;\n  font-weight: bold;\n  transform: translate(-50%, -50%); }\n\n.overlay {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.05);\n  z-index: 1001;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n.pin-btn-container {\n  position: absolute;\n  bottom: 20px;\n  right: 20px;\n  z-index: 1000; }\n", ""]);
+exports.push([module.i, ".action-widget {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-grow: 1;\n  flex-direction: column;\n  justify-content: center;\n  cursor: pointer; }\n  .action-widget .icon {\n    background-size: contain;\n    width: 30px;\n    height: 30px;\n    margin: 10px 0px; }\n\n.fb-icon {\n  background-image: url(https://uxp.s3.amazonaws.com/public/images/facility-icon.png); }\n\n.room-booking .modal-panel {\n  min-width: 900px;\n  max-width: 900px;\n  height: 900px; }\n\n.room-booking .home .search {\n  width: 300px; }\n\n.room-booking .home .search-results {\n  height: 300px;\n  overflow: auto; }\n  .room-booking .home .search-results .nodata {\n    text-align: center;\n    margin-top: 30px; }\n\n.room-booking .home .result {\n  display: inline-block;\n  margin: 20px;\n  width: 170px;\n  height: 220px;\n  vertical-align: top;\n  position: relative; }\n  .room-booking .home .result .image {\n    width: 150px;\n    height: 150px;\n    display: inline-block;\n    background-size: cover;\n    border-radius: 10px;\n    cursor: pointer;\n    background-color: rgba(128, 128, 128, 0.23); }\n  .room-booking .home .result .capacity {\n    position: absolute;\n    right: 25px;\n    top: 122px;\n    background-color: #FEFEFE;\n    padding: 5px 20px;\n    font-size: 10px;\n    color: #424242;\n    text-transform: uppercase;\n    border-radius: 15px; }\n  .room-booking .home .result .name {\n    margin: 10px 0px; }\n\n.room-booking .select-date > div {\n  margin-bottom: 20px; }\n\n.facility-tooltip {\n  display: inline-block;\n  line-height: 1.5em;\n  max-width: 400px;\n  max-height: 300px;\n  white-space: pre;\n  word-break: break-word;\n  overflow: auto; }\n\n.sub-header {\n  background-size: cover;\n  display: flex;\n  flex-direction: column;\n  margin: -20px -20px 20px -20px;\n  position: relative;\n  height: 100px;\n  justify-content: center; }\n  .sub-header::before {\n    content: '';\n    position: absolute;\n    background-color: rgba(126, 126, 205, 0.72);\n    width: 100%;\n    height: 100%;\n    left: 0px;\n    top: 0px; }\n  .sub-header .label {\n    font-size: 14px;\n    color: white;\n    z-index: 1;\n    margin-left: 20px; }\n\n.visitor-item {\n  color: #424242; }\n\n.wm-status-step .profile-image-container {\n  width: 20px;\n  height: 20px;\n  display: flex;\n  margin-right: 5px; }\n  .wm-status-step .profile-image-container .name {\n    font-size: 7px; }\n\n.ahac-icon {\n  background-image: url(https://uxp.s3.amazonaws.com/public/images/ahac.png);\n  background-size: contain;\n  width: 100px;\n  height: 100px;\n  margin-bottom: 30px;\n  background-repeat: no-repeat;\n  background-position: center;\n  display: inline-block; }\n\n.visitor-icon {\n  background-image: url(https://uxp.s3.amazonaws.com/public/images/visitors.svg);\n  background-size: contain;\n  width: 100px;\n  height: 100px;\n  margin-bottom: 30px;\n  background-repeat: no-repeat;\n  background-position: center;\n  display: inline-block; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -424,51 +421,6 @@ function toComment(sourceMap) {
   var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
   return "/*# ".concat(data, " */");
 }
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
-/*!********************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function (url, options) {
-  if (!options) {
-    // eslint-disable-next-line no-param-reassign
-    options = {};
-  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign
-
-
-  url = url && url.__esModule ? url.default : url;
-
-  if (typeof url !== 'string') {
-    return url;
-  } // If url is already wrapped in quotes, remove them
-
-
-  if (/^['"].*['"]$/.test(url)) {
-    // eslint-disable-next-line no-param-reassign
-    url = url.slice(1, -1);
-  }
-
-  if (options.hash) {
-    // eslint-disable-next-line no-param-reassign
-    url += options.hash;
-  } // Should url be wrapped?
-  // See https://drafts.csswg.org/css-values-3/#urls
-
-
-  if (/["'() \t\n]/.test(url) || options.needQuotes) {
-    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, '\\n'), "\"");
-  }
-
-  return url;
-};
 
 /***/ }),
 
@@ -10283,840 +10235,6 @@ module.exports.formatError = function(err) {
 
 /***/ }),
 
-/***/ "./src/OccupancyCount.tsx":
-/*!********************************!*\
-  !*** ./src/OccupancyCount.tsx ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const React = __importStar(__webpack_require__(/*! react */ "react"));
-const uxp_1 = __webpack_require__(/*! ./uxp */ "./src/uxp.ts");
-const components_1 = __webpack_require__(/*! uxp/components */ "uxp/components");
-const SpaceOccupancyAnalyticsDisplay = (props) => {
-    var _a;
-    let [loading, setLoading] = React.useState(false);
-    let [floors, setFloors] = React.useState([]);
-    let [floor, setFloor] = React.useState(null);
-    let [spaces, setSpaces] = React.useState([]);
-    let [occupancy, setOccupancy] = React.useState({});
-    let [filterTime, setFilterTime] = React.useState(new Date());
-    let [bucket, setBucket] = React.useState('current');
-    let [configs, setConfigs] = React.useState(null);
-    let updateDefaultProps = components_1.useUpdateWidgetProps();
-    let getValues = uxp_1.debounce(getLatestValues, 500);
-    let refreshValues = uxp_1.debounce(getLatestValues, (60 * 1000));
-    React.useEffect(() => {
-        props.uxpContext.executeAction('SmartSpace', 'GetFloors', {}, { json: true }).then(data => {
-            setFloors(data.map((d) => ({ label: d.name, value: d.id, data: d })));
-            if (!floor && data.length) {
-                setFloor(data[0].id);
-            }
-        });
-    }, []);
-    React.useEffect(() => {
-        props.uxpContext.executeAction('SmartSpace', 'GetSpaces', { 'floor': floor }, { json: true }).then((data) => {
-            setSpaces(data);
-        });
-    }, [floor]);
-    React.useEffect(() => {
-        if (!floor) {
-            return;
-        }
-        getValues();
-    }, [filterTime, bucket, floor]);
-    function getLatestValues() {
-        return __awaiter(this, void 0, void 0, function* () {
-            let action = 'GetOccupancyForFloor';
-            let args = { floor };
-            if (bucket != 'current' && filterTime) {
-                action = 'GetHistoricalOccupancyForFloor';
-                args['bucket'] = bucket;
-                let d = new Date(filterTime);
-                d.setMinutes(0);
-                d.setSeconds(0);
-                d.setMilliseconds(0);
-                if (bucket == 'day' || bucket == 'week' || bucket == 'month') {
-                    d.setHours(0);
-                }
-                let end = new Date(d);
-                if (bucket == 'hour') {
-                    end.setHours(end.getHours() + 1);
-                }
-                if (bucket == 'day') {
-                    end.setDate(end.getDate() + 1);
-                }
-                if (bucket == 'week') {
-                    end.setDate(end.getDate() + 7);
-                }
-                if (bucket == 'month') {
-                    end.setDate(1);
-                    end.setMonth(end.getMonth() + 1);
-                }
-                args['start'] = d.toISOString();
-                args['end'] = end.toISOString();
-            }
-            let data = yield props.uxpContext.executeAction('SmartSpace', action, args, { json: true });
-            console.log('occ: ', data);
-            let latestOccupancy = {};
-            for (var i in data) {
-                let d = data[i];
-                latestOccupancy[d.id] = Number(d.value);
-            }
-            setOccupancy(latestOccupancy);
-            refreshValues();
-        });
-    }
-    function nextDate(offset) {
-        if (bucket == 'current')
-            return;
-        let d = new Date(filterTime);
-        d.setMinutes(0);
-        d.setSeconds(0);
-        d.setMilliseconds(0);
-        if (bucket == 'hour') {
-            d.setHours(d.getHours() + offset);
-        }
-        if (bucket == 'day') {
-            d.setHours(0);
-            d.setDate(d.getDate() + offset);
-        }
-        if (bucket == 'week') {
-            d.setHours(0);
-            d.setDate(d.getDate() - d.getDay());
-            d.setDate(d.getDate() + 7 * offset);
-        }
-        if (bucket == 'month') {
-            d.setHours(0);
-            d.setDate(1);
-            d.setMonth(d.getMonth() + offset);
-        }
-        setFilterTime(d);
-    }
-    function getStatusColor(id) {
-        let val = Number(occupancy[id]) || 0;
-        if (val == 0)
-            return '#424242FF';
-        if (val < 3)
-            return '#2CC8B3FF';
-        if (val < 6)
-            return '#DDBC52FF';
-        if (val < 8)
-            return '#DA7D51FF';
-        return '#EC4B7B99';
-    }
-    var regionCenter = function (arr) {
-        var minX, maxX, minY, maxY;
-        for (var i = 0; i < arr.length; i++) {
-            minX = (arr[i][0] < minX || minX == null) ? arr[i][0] : minX;
-            maxX = (arr[i][0] > maxX || maxX == null) ? arr[i][0] : maxX;
-            minY = (arr[i][1] < minY || minY == null) ? arr[i][1] : minY;
-            maxY = (arr[i][1] > maxY || maxY == null) ? arr[i][1] : maxY;
-        }
-        return [(minX + maxX) / 2, (minY + maxY) / 2];
-    };
-    let markers = [];
-    let floorData = (_a = floors.find(x => x.value == floor)) === null || _a === void 0 ? void 0 : _a.data;
-    let regions = [];
-    let xo = 80;
-    let yo = 50;
-    for (var i in spaces) {
-        let space = spaces[i];
-        let c = getStatusColor(space.id);
-        let centrePoint = regionCenter(space.region.map((c) => [c.x, c.y]));
-        markers.push({
-            longitude: centrePoint[0],
-            latitude: centrePoint[1],
-            imageCoordinates: true,
-            customHTMLIcon: { className: 'space-icon', html: '<div style="background-color:' + c + '">' + (Number(occupancy[space.id]) || 0) + '</div>' }
-        });
-    }
-    function onZoomEnd(e) {
-        setConfigs({ zoom: e.target._zoom, center: e.target.getCenter() });
-    }
-    function onDragEnd(e) {
-        setConfigs({ zoom: e.target._zoom, center: e.target.getCenter() });
-    }
-    function updateProps() {
-        return __awaiter(this, void 0, void 0, function* () {
-            let dProps = {
-                zoom: configs.zoom,
-                center: { latitude: configs.center.lat, longitude: configs.center.lng }
-            };
-            updateDefaultProps(props.instanceId, dProps);
-            setConfigs(null);
-        });
-    }
-    let _center = {
-        position: {
-            latitude: (floorData === null || floorData === void 0 ? void 0 : floorData.floorPlanWidth) * 0.5,
-            longitude: (floorData === null || floorData === void 0 ? void 0 : floorData.floorPlanHeight) * 0.5
-        },
-        renderMarker: false
-    };
-    if (props.center && props.center.latitude && props.center.longitude) {
-        _center.position = props.center;
-    }
-    return (React.createElement(components_1.WidgetWrapper, { className: 'spa display' },
-        (floorData && floorData.floorPlan) ?
-            React.createElement(components_1.MapComponent, { zoom: props.zoom ? props.zoom : -1, minZoom: -3, center: _center, regions: regions, staticImage: {
-                    url: floorData.floorPlan,
-                    width: floorData.floorPlanWidth - 180,
-                    height: floorData.floorPlanHeight - 120
-                }, onRegionClick: (e, data) => {
-                }, markers: markers, onMarkerClick: () => { }, mapUrl: '', onZoomEnd: onZoomEnd, onDragEnd: onDragEnd })
-            : React.createElement("div", { className: 'nomap' }, "Select a floor to get started"),
-        React.createElement("div", { className: "header" },
-            React.createElement("div", { className: "title" }, "Space Occupancydd")),
-        React.createElement("div", { className: 'legend-bar' },
-            React.createElement("div", { className: 'legend-status' },
-                React.createElement("div", { className: 'color', style: { backgroundColor: '#EC4B7B99' } }),
-                React.createElement("div", { className: 'txt' }, "Very High Density")),
-            React.createElement("div", { className: 'legend-status' },
-                React.createElement("div", { className: 'color', style: { backgroundColor: '#DA7D51FF' } }),
-                React.createElement("div", { className: 'txt' }, " High Density")),
-            React.createElement("div", { className: 'legend-status' },
-                React.createElement("div", { className: 'color', style: { backgroundColor: '#DDBC52FF' } }),
-                React.createElement("div", { className: 'txt' }, "Medium Density")),
-            React.createElement("div", { className: 'legend-status' },
-                React.createElement("div", { className: 'color', style: { backgroundColor: '#2CC8B3FF' } }),
-                React.createElement("div", { className: 'txt' }, "Low Density"))),
-        configs != null && React.createElement("div", { className: "pin-btn-container" },
-            React.createElement(components_1.IconButton, { type: "pin", onClick: updateProps }))));
-};
-exports.default = SpaceOccupancyAnalyticsDisplay;
-
-
-/***/ }),
-
-/***/ "./src/SpaceOccupancy.tsx":
-/*!********************************!*\
-  !*** ./src/SpaceOccupancy.tsx ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const React = __importStar(__webpack_require__(/*! react */ "react"));
-const uxp_1 = __webpack_require__(/*! ./uxp */ "./src/uxp.ts");
-const components_1 = __webpack_require__(/*! uxp/components */ "uxp/components");
-const SpaceOccupancyAnalytics = (props) => {
-    var _a;
-    let [loading, setLoading] = React.useState(false);
-    let [floors, setFloors] = React.useState([]);
-    let [floor, setFloor] = React.useState(null);
-    let [spaces, setSpaces] = React.useState([]);
-    let [occupancy, setOccupancy] = React.useState({});
-    let [filterTime, setFilterTime] = React.useState(new Date());
-    let [bucket, setBucket] = React.useState('current');
-    let [configs, setConfigs] = React.useState(null);
-    let updateDefaultProps = components_1.useUpdateWidgetProps();
-    let getValues = uxp_1.debounce(getLatestValues, 500);
-    let refreshValues = uxp_1.debounce(getLatestValues, (60 * 1000));
-    // get floors 
-    React.useEffect(() => {
-        props.uxpContext.executeAction('SmartSpace', 'GetFloors', {}, { json: true }).then(data => {
-            setFloors(data.map((d) => ({ label: d.name, value: d.id, data: d })));
-            if (!floor && data.length) {
-                setFloor(data[0].id);
-            }
-        });
-    }, []);
-    // get spaces
-    React.useEffect(() => {
-        props.uxpContext.executeAction('SmartSpace', 'GetSpaces', { 'floor': floor }, { json: true }).then((data) => {
-            setSpaces(data);
-            console.log("data ", data);
-        });
-    }, [floor]);
-    // get occupancy data
-    React.useEffect(() => {
-        if (!floor) {
-            return;
-        }
-        setLoading(true);
-        getValues();
-    }, [filterTime, bucket, floor, spaces]);
-    // debounced function to get latest readings
-    function getLatestValues() {
-        return __awaiter(this, void 0, void 0, function* () {
-            let action = 'GetOccupancyForFloor';
-            let args = { floor };
-            if (bucket != 'current' && filterTime) {
-                action = 'GetHistoricalOccupancyForFloor';
-                args['bucket'] = bucket;
-                let d = new Date(filterTime);
-                d.setMinutes(0);
-                d.setSeconds(0);
-                d.setMilliseconds(0);
-                if (bucket == 'day' || bucket == 'week' || bucket == 'month') {
-                    d.setHours(0);
-                }
-                let end = new Date(d);
-                if (bucket == 'hour') {
-                    end.setHours(end.getHours() + 1);
-                }
-                if (bucket == 'day') {
-                    end.setDate(end.getDate() + 1);
-                }
-                if (bucket == 'week') {
-                    end.setDate(end.getDate() + 7);
-                }
-                if (bucket == 'month') {
-                    end.setDate(1);
-                    end.setMonth(end.getMonth() + 1);
-                }
-                args['start'] = d.toISOString();
-                args['end'] = end.toISOString();
-            }
-            let data = yield props.uxpContext.executeAction('SmartSpace', action, args, { json: true });
-            console.log('occ: ', data);
-            let latestOccupancy = {};
-            for (var i in data) {
-                let d = data[i];
-                latestOccupancy[d.id] = Number(d.value);
-            }
-            setOccupancy(latestOccupancy);
-            setLoading(false);
-            refreshValues();
-        });
-    }
-    // navigate 
-    function nextDate(offset) {
-        if (bucket == 'current')
-            return;
-        let d = new Date(filterTime);
-        d.setMinutes(0);
-        d.setSeconds(0);
-        d.setMilliseconds(0);
-        if (bucket == 'hour') {
-            d.setHours(d.getHours() + offset);
-        }
-        if (bucket == 'day') {
-            d.setHours(0);
-            d.setDate(d.getDate() + offset);
-        }
-        if (bucket == 'week') {
-            d.setHours(0);
-            d.setDate(d.getDate() - d.getDay());
-            d.setDate(d.getDate() + 7 * offset);
-        }
-        if (bucket == 'month') {
-            d.setHours(0);
-            d.setDate(1);
-            d.setMonth(d.getMonth() + offset);
-        }
-        setFilterTime(d);
-    }
-    function getStatusColor(id) {
-        let val = Number(occupancy[id]) || 0;
-        // val = Math.random()*10;
-        if (val == 0)
-            return '#424242FF';
-        if (val < 3)
-            return '#2CC8B3FF';
-        if (val < 6)
-            return '#DDBC52FF';
-        if (val < 8)
-            return '#DA7D51FF';
-        return '#EC4B7B99';
-    }
-    // prepare data set
-    let floorData = (_a = floors.find(x => x.value == floor)) === null || _a === void 0 ? void 0 : _a.data;
-    let regions = [];
-    for (var i in spaces) {
-        let space = spaces[i];
-        let c = getStatusColor(space.id);
-        regions.push({
-            type: 'polygon',
-            color: c,
-            fillColor: c,
-            bounds: space.region.map((c) => [c.x, c.y]),
-            imageCoordinates: true,
-            data: space,
-            tooltipContent: () => React.createElement("div", null, space.name + ' -  ' + (Number(occupancy[space.id]) || 0) + ' occupants')
-        });
-    }
-    function formatDate(dt) {
-        if (!dt)
-            return '';
-        if (bucket == 'day') {
-            return dt.getFullYear() + '-' + (dt.getMonth() + 1) + '-' + dt.getDate();
-        }
-        return dt.getFullYear() + '-' + (dt.getMonth() + 1) + '-' + dt.getDate() + ' ' + dt.getHours() + ':00:00';
-    }
-    function onZoomEnd(e) {
-        setConfigs({ zoom: e.target._zoom, center: e.target.getCenter() });
-    }
-    function onDragEnd(e) {
-        setConfigs({ zoom: e.target._zoom, center: e.target.getCenter() });
-    }
-    function updateProps() {
-        return __awaiter(this, void 0, void 0, function* () {
-            let dProps = {
-                zoom: configs.zoom,
-                center: { latitude: configs.center.lat, longitude: configs.center.lng }
-            };
-            updateDefaultProps(props.instanceId, dProps);
-            setConfigs(null);
-        });
-    }
-    let _center = {
-        position: {
-            latitude: (floorData === null || floorData === void 0 ? void 0 : floorData.floorPlanWidth) * 0.5,
-            longitude: (floorData === null || floorData === void 0 ? void 0 : floorData.floorPlanHeight) * 0.5
-        },
-        renderMarker: false
-    };
-    if (props.center && props.center.latitude && props.center.longitude) {
-        _center.position = props.center;
-    }
-    return (React.createElement(components_1.WidgetWrapper, { className: 'spa' },
-        (floorData && floorData.floorPlan) ?
-            React.createElement(components_1.MapComponent, { zoom: props.zoom ? props.zoom : -1, minZoom: -3, center: _center, regions: regions, staticImage: {
-                    url: floorData.floorPlan,
-                    width: floorData.floorPlanWidth - 180,
-                    height: floorData.floorPlanHeight - 120
-                }, onRegionClick: (e, data) => {
-                }, markers: [], onMarkerClick: () => { }, mapUrl: '', onZoomEnd: onZoomEnd, onDragEnd: onDragEnd })
-            : React.createElement("div", { className: 'nomap' }, "Select a floor to get started"),
-        React.createElement("div", { className: "header" },
-            React.createElement("div", { className: "title" }, "Space Occupancy")),
-        React.createElement("div", { className: 'toolbar' },
-            React.createElement(components_1.IconButton, { onClick: () => nextDate(-1), className: 'date-button', type: "arrow-left" }),
-            React.createElement(components_1.DropDownButton, { content: () => React.createElement("div", { style: { minWidth: '370px' } },
-                    React.createElement("div", { style: { marginBottom: '10px' } },
-                        React.createElement(components_1.ToggleFilter, { options: [{ label: 'Current', value: 'current' }, { label: 'Hourly', value: 'hour' }, { label: 'Daily', value: 'day' }, { label: 'Weekly', value: 'week' }, { label: "Monthly", value: "month" }], onChange: setBucket, value: bucket })),
-                    bucket == 'hour' ?
-                        React.createElement(components_1.DateTimePicker, { datetime: filterTime, onChange: setFilterTime, title: '' })
-                        : bucket == 'current' ? null
-                            : React.createElement(components_1.DatePicker, { date: filterTime, onChange: setFilterTime, title: '' })) },
-                React.createElement("div", { className: 'date-label' }, bucket == 'current' ? 'Showing Current Values'
-                    : formatDate(filterTime) || 'Select Date')),
-            React.createElement(components_1.IconButton, { onClick: () => nextDate(1), className: 'date-button', type: "arrow-right" }),
-            React.createElement("div", { className: 'level-logo' }),
-            React.createElement(components_1.Select, { onChange: setFloor, options: floors, selected: floor })),
-        React.createElement("div", { className: 'legend-bar' },
-            React.createElement("div", { className: 'legend-status' },
-                React.createElement("div", { className: 'color', style: { backgroundColor: '#EC4B7B99' } }),
-                React.createElement("div", { className: 'txt' }, "Very High Density")),
-            React.createElement("div", { className: 'legend-status' },
-                React.createElement("div", { className: 'color', style: { backgroundColor: '#DA7D51FF' } }),
-                React.createElement("div", { className: 'txt' }, " High Density")),
-            React.createElement("div", { className: 'legend-status' },
-                React.createElement("div", { className: 'color', style: { backgroundColor: '#DDBC52FF' } }),
-                React.createElement("div", { className: 'txt' }, "Medium Density")),
-            React.createElement("div", { className: 'legend-status' },
-                React.createElement("div", { className: 'color', style: { backgroundColor: '#2CC8B3FF' } }),
-                React.createElement("div", { className: 'txt' }, "Low Density"))),
-        configs != null && React.createElement("div", { className: "pin-btn-container" },
-            React.createElement(components_1.IconButton, { type: "pin", onClick: updateProps })),
-        loading && React.createElement("div", { className: "overlay" },
-            React.createElement(components_1.Loading, null))));
-};
-SpaceOccupancyAnalytics.defaultProps = {};
-exports.default = SpaceOccupancyAnalytics;
-
-
-/***/ }),
-
-/***/ "./src/SpaceUtilization.tsx":
-/*!**********************************!*\
-  !*** ./src/SpaceUtilization.tsx ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const React = __importStar(__webpack_require__(/*! react */ "react"));
-const uxp_1 = __webpack_require__(/*! ./uxp */ "./src/uxp.ts");
-const components_1 = __webpack_require__(/*! uxp/components */ "uxp/components");
-const SpaceUtilization = (props) => {
-    var _a;
-    let [loading, setLoading] = React.useState(false);
-    let [view, setView] = React.useState('list');
-    let [floors, setFloors] = React.useState([]);
-    let [floor, setFloor] = React.useState(null);
-    let [spaces, setSpaces] = React.useState([]);
-    let [occupancy, setOccupancy] = React.useState({});
-    let [filterTime, setFilterTime] = React.useState(new Date());
-    let [bucket, setBucket] = React.useState('current');
-    let [configs, setConfigs] = React.useState(null);
-    let updateDefaultProps = components_1.useUpdateWidgetProps();
-    let getValues = uxp_1.debounce(getLatestValues, 500);
-    let refreshValues = uxp_1.debounce(getLatestValues, (60 * 1000));
-    // get floors
-    React.useEffect(() => {
-        setLoading(true);
-        props.uxpContext.executeAction('SmartSpace', 'GetFloors', {}, { json: true })
-            .then(data => {
-            setFloors(data.map((d) => ({ label: d.name, value: d.id, data: d })));
-            if (!floor && data.length) {
-                setFloor(data[0].id);
-                setLoading(false);
-            }
-        })
-            .catch(e => {
-            setLoading(false);
-        });
-    }, []);
-    // get spaces
-    React.useEffect(() => {
-        getSpaces();
-    }, [floor]);
-    function getSpaces() {
-        return __awaiter(this, void 0, void 0, function* () {
-            // let rooms = await props.uxpContext.executeAction('MeetingRoomAnalytics', 'Rooms', {}, { json: true })
-            let areas = yield props.uxpContext.executeAction('SmartSpace', 'GetSpaces', { 'floor': floor }, { json: true });
-            // console.log("floor ", floor)
-            // console.log('rooms ', rooms)
-            // console.log('space ', areas)
-            // let spaces = areas.map((a: any) => {
-            // let inst = rooms.find((r: any) => r.name.toUpperCase() == a.name.toUpperCase())
-            // if (inst) {
-            //     a.capacity = inst.capacity
-            //     return a
-            // }
-            // else return null
-            // if (a.capacity) return a
-            // return null
-            // })
-            setSpaces(areas.filter((a) => a.capacity));
-        });
-    }
-    React.useEffect(() => {
-        if (!floor) {
-            return;
-        }
-        setLoading(true);
-        getValues();
-    }, [filterTime, bucket, floor]);
-    // get latest readings
-    function getLatestValues() {
-        return __awaiter(this, void 0, void 0, function* () {
-            let action = 'GetOccupancyForFloor';
-            let args = { floor };
-            if (bucket != 'current' && filterTime) {
-                action = 'GetHistoricalOccupancyForFloor';
-                args['bucket'] = bucket;
-                let d = new Date(filterTime);
-                d.setMinutes(0);
-                d.setSeconds(0);
-                d.setMilliseconds(0);
-                if (bucket == 'day' || bucket == 'week' || bucket == 'month') {
-                    d.setHours(0);
-                }
-                let end = new Date(d);
-                if (bucket == 'hour') {
-                    end.setHours(end.getHours() + 1);
-                }
-                if (bucket == 'day') {
-                    end.setDate(end.getDate() + 1);
-                }
-                if (bucket == 'week') {
-                    end.setDate(end.getDate() + 7);
-                }
-                if (bucket == 'month') {
-                    end.setDate(1);
-                    end.setMonth(end.getMonth() + 1);
-                }
-                args['start'] = d.toISOString();
-                args['end'] = end.toISOString();
-            }
-            let data = yield props.uxpContext.executeAction('SmartSpace', action, args, { json: true });
-            console.log('occ: ', data);
-            let latestOccupancy = {};
-            for (var i in data) {
-                let d = data[i];
-                latestOccupancy[d.id] = Number(d.value);
-            }
-            setOccupancy(latestOccupancy);
-            setLoading(false);
-            refreshValues();
-        });
-    }
-    function nextDate(offset) {
-        if (bucket == 'current')
-            return;
-        let d = new Date(filterTime);
-        d.setMinutes(0);
-        d.setSeconds(0);
-        d.setMilliseconds(0);
-        if (bucket == 'hour') {
-            d.setHours(d.getHours() + offset);
-        }
-        if (bucket == 'day') {
-            d.setHours(0);
-            d.setDate(d.getDate() + offset);
-        }
-        if (bucket == 'week') {
-            d.setHours(0);
-            d.setDate(d.getDate() - d.getDay());
-            d.setDate(d.getDate() + 7 * offset);
-        }
-        if (bucket == 'month') {
-            d.setHours(0);
-            d.setDate(1);
-            d.setMonth(d.getMonth() + offset);
-        }
-        setFilterTime(d);
-    }
-    function getStatusColor(percentage) {
-        if (percentage == 0)
-            return '#424242FF';
-        if (percentage < 50)
-            return '#2CC8B3FF';
-        if (percentage < 75)
-            return '#DDBC52FF';
-        if (percentage < 100)
-            return '#DA7D51FF';
-        return '#EC4B7B99';
-    }
-    let floorData = (_a = floors.find(x => x.value == floor)) === null || _a === void 0 ? void 0 : _a.data;
-    let regions = [];
-    let occupancyDetails = [];
-    for (var i in spaces) {
-        let space = spaces[i];
-        let occ = Number(occupancy[space.id]) || 0;
-        let capacity = Number(space.capacity) || 0;
-        let percentage = uxp_1.round(((occ / capacity) * 100), 2);
-        if (!isFinite(percentage))
-            percentage = 0;
-        let color = getStatusColor(percentage);
-        if (!regions.find((o) => o.data.name.toLowerCase() == space.name.toLowerCase())) {
-            regions.push({
-                type: 'polygon',
-                color: color,
-                fillColor: color,
-                bounds: space.region.map((c) => [c.x, c.y]),
-                imageCoordinates: true,
-                data: space,
-                tooltipContent: () => React.createElement("div", null, space.name + ' -  ' + percentage + '% occupied')
-            });
-        }
-        if (!occupancyDetails.find((o) => o.area.toLowerCase() == space.name.toLowerCase())) {
-            occupancyDetails.push({
-                area: space.name,
-                capacity: capacity,
-                occupancy: occ,
-                percentage: percentage,
-                color: color
-            });
-        }
-    }
-    function formatDate(dt) {
-        if (!dt)
-            return '';
-        if (bucket == 'day') {
-            return dt.getFullYear() + '-' + (dt.getMonth() + 1) + '-' + dt.getDate();
-        }
-        return dt.getFullYear() + '-' + (dt.getMonth() + 1) + '-' + dt.getDate() + ' ' + dt.getHours() + ':00:00';
-    }
-    function onZoomEnd(e) {
-        setConfigs({ zoom: e.target._zoom, center: e.target.getCenter() });
-    }
-    function onDragEnd(e) {
-        setConfigs({ zoom: e.target._zoom, center: e.target.getCenter() });
-    }
-    function updateProps() {
-        return __awaiter(this, void 0, void 0, function* () {
-            let dProps = {
-                zoom: configs.zoom,
-                center: { latitude: configs.center.lat, longitude: configs.center.lng }
-            };
-            updateDefaultProps(props.instanceId, dProps);
-            setConfigs(null);
-        });
-    }
-    let _center = {
-        position: {
-            latitude: (floorData === null || floorData === void 0 ? void 0 : floorData.floorPlanWidth) * 0.5,
-            longitude: (floorData === null || floorData === void 0 ? void 0 : floorData.floorPlanHeight) * 0.5
-        },
-        renderMarker: false
-    };
-    if (props.center && props.center.latitude && props.center.longitude) {
-        _center.position = props.center;
-    }
-    return (React.createElement(components_1.WidgetWrapper, { className: 'spa' },
-        (floorData && floorData.floorPlan) ?
-            React.createElement(React.Fragment, null, view == 'list' ?
-                React.createElement("div", { className: "list-cont" },
-                    React.createElement(components_1.DataTable, { className: 'occupancy-list', columns: [
-                            {
-                                title: 'Room',
-                                width: '55%',
-                                renderColumn: (item) => {
-                                    return React.createElement("div", null, item.area);
-                                }
-                            },
-                            {
-                                title: 'Capacity',
-                                width: '15%',
-                                renderColumn: (item) => {
-                                    return React.createElement("div", null, item.capacity);
-                                }
-                            },
-                            {
-                                title: 'Occupancy',
-                                width: '15%',
-                                renderColumn: (item) => {
-                                    return React.createElement("div", null, item.occupancy);
-                                }
-                            },
-                            {
-                                title: 'Percentage',
-                                width: '15%',
-                                renderColumn: (item) => {
-                                    return React.createElement("div", { className: 'percentage' },
-                                        React.createElement("div", { style: { backgroundColor: item.color } },
-                                            item.percentage,
-                                            "%"));
-                                }
-                            }
-                        ], pageSize: 20, data: uxp_1.arraySort(occupancyDetails, "percentage", "DESC"), showEndOfContent: false, showFooter: false }))
-                :
-                    React.createElement(components_1.MapComponent, { zoom: props.zoom ? props.zoom : -1, minZoom: -3, center: _center, regions: regions, staticImage: {
-                            url: floorData.floorPlan,
-                            width: floorData.floorPlanWidth - 180,
-                            height: floorData.floorPlanHeight - 120
-                        }, onRegionClick: (e, data) => {
-                        }, markers: [], onMarkerClick: () => { }, mapUrl: '', onZoomEnd: onZoomEnd, onDragEnd: onDragEnd }))
-            : React.createElement("div", { className: 'nomap' }, loading ? React.createElement(components_1.Loading, null) : 'Select a floor to get started'),
-        React.createElement("div", { className: `header ${view}` },
-            React.createElement("div", { className: "title" }, "Space Utilization")),
-        React.createElement("div", { className: 'toolbar' },
-            React.createElement(components_1.ToggleFilter, { options: [
-                    { label: "List", value: "list" },
-                    { label: "Map", value: "map" }
-                ], value: view, onChange: setView }),
-            React.createElement(components_1.IconButton, { onClick: () => nextDate(-1), className: 'date-button', type: "arrow-left" }),
-            React.createElement(components_1.DropDownButton, { content: () => React.createElement("div", { style: { minWidth: '370px' } },
-                    React.createElement("div", { style: { marginBottom: '10px' } },
-                        React.createElement(components_1.ToggleFilter, { options: [{ label: 'Current', value: 'current' }, { label: 'Hourly', value: 'hour' }, { label: 'Daily', value: 'day' }, { label: 'Weekly', value: 'week' }, { label: "Monthly", value: "month" }], onChange: setBucket, value: bucket })),
-                    bucket == 'hour' ?
-                        React.createElement(components_1.DateTimePicker, { datetime: filterTime, onChange: setFilterTime, title: '' })
-                        : bucket == 'current' ? null
-                            : React.createElement(components_1.DatePicker, { date: filterTime, onChange: setFilterTime, title: '' })) },
-                React.createElement("div", { className: 'date-label' }, bucket == 'current' ? 'Showing Current Values'
-                    : formatDate(filterTime) || 'Select Date')),
-            React.createElement(components_1.IconButton, { onClick: () => nextDate(1), className: 'date-button', type: "arrow-right" }),
-            React.createElement("div", { className: 'level-logo' }),
-            React.createElement(components_1.Select, { onChange: setFloor, options: floors, selected: floor })),
-        React.createElement("div", { className: `legend-bar ${view}` },
-            React.createElement("div", { className: 'legend-status' },
-                React.createElement("div", { className: 'color', style: { backgroundColor: '#EC4B7B99' } }),
-                React.createElement("div", { className: 'txt' }, "Very High Density")),
-            React.createElement("div", { className: 'legend-status' },
-                React.createElement("div", { className: 'color', style: { backgroundColor: '#DA7D51FF' } }),
-                React.createElement("div", { className: 'txt' }, " High Density")),
-            React.createElement("div", { className: 'legend-status' },
-                React.createElement("div", { className: 'color', style: { backgroundColor: '#DDBC52FF' } }),
-                React.createElement("div", { className: 'txt' }, "Medium Density")),
-            React.createElement("div", { className: 'legend-status' },
-                React.createElement("div", { className: 'color', style: { backgroundColor: '#2CC8B3FF' } }),
-                React.createElement("div", { className: 'txt' }, "Low Density"))),
-        configs != null && React.createElement("div", { className: "pin-btn-container" },
-            React.createElement(components_1.IconButton, { type: "pin", onClick: updateProps })),
-        loading && React.createElement("div", { className: "overlay" },
-            React.createElement(components_1.Loading, null))));
-};
-exports.default = SpaceUtilization;
-
-
-/***/ }),
-
 /***/ "./src/index.tsx":
 /*!***********************!*\
   !*** ./src/index.tsx ***!
@@ -11126,66 +10244,391 @@ exports.default = SpaceUtilization;
 
 "use strict";
 
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const React = __importStar(__webpack_require__(/*! react */ "react"));
 const uxp_1 = __webpack_require__(/*! ./uxp */ "./src/uxp.ts");
+const components_1 = __webpack_require__(/*! uxp/components */ "uxp/components");
 __webpack_require__(/*! ./styles.scss */ "./src/styles.scss");
-const SpaceOccupancy_1 = __importDefault(__webpack_require__(/*! ./SpaceOccupancy */ "./src/SpaceOccupancy.tsx"));
-const SpaceUtilization_1 = __importDefault(__webpack_require__(/*! ./SpaceUtilization */ "./src/SpaceUtilization.tsx"));
-const OccupancyCount_1 = __importDefault(__webpack_require__(/*! ./OccupancyCount */ "./src/OccupancyCount.tsx"));
+function delay(n) {
+    return new Promise((dope, nope) => {
+        setTimeout(() => dope(), n);
+    });
+}
+const RoomBookingWizard = (props) => {
+    let [txt, setTxt] = React.useState('');
+    let [txt1, setTxt1] = React.useState('');
+    let [loadingSearch, setLoadingSearch] = React.useState(false);
+    let [facilities, setFacilities] = React.useState([]);
+    let [submission, setSubmission] = React.useState(null);
+    let steps = [];
+    let [field, updateField, allFields, setAllFields] = components_1.useFields({
+        'query': '',
+        'startDateSearch': null,
+        startTimeSearch: null,
+        endTimeSearch: null,
+        facility: null,
+        visitors: [],
+        startDate: null,
+        startTime: null,
+        endTime: null,
+        ac: false,
+        agenda: ''
+    });
+    let [addons, updateAddons, allAddons, setAllAddons] = components_1.useFields({
+        ahac: false,
+        visitors: [],
+    });
+    let Toast = components_1.useToast();
+    React.useEffect(() => {
+        triggerSearch();
+    }, [field.query, field.startDateSearch, field.endDateSearch]);
+    function triggerSearch() {
+        return __awaiter(this, void 0, void 0, function* () {
+            let start = null;
+            let end = null;
+            if (field.startDateSearch) {
+                start = field.startDateSearch;
+                end = field.startDateSearch;
+                start.setHours(0);
+                start.setMinutes(0);
+                start.setSeconds(0);
+                end.setHours(0);
+                end.setMinutes(0);
+                end.setSeconds(0);
+            }
+            if (field.startTimeSearch) {
+                start.setHours(field.startTimeSearch.getHours());
+                start.setMinutes(field.startTimeSearch.getMinutes());
+            }
+            if (field.endTimeSearch) {
+                end.setHours(field.endTimeSearch.getHours());
+                end.setMinutes(field.endTimeSearch.getMinutes());
+            }
+            if (start && end) {
+                start = start.toISOString();
+                end = end.toISOString();
+            }
+            let args = { 'name': field.query, start, end };
+            console.log('Qurting', start, end);
+            setLoadingSearch(true);
+            let result = yield props.uxpContext.executeAction('OfficeRND.MeetingRoomAnalytics', 'FindRoom', args, { json: true });
+            setLoadingSearch(false);
+            setFacilities(result);
+        });
+    }
+    function renderFacilityResult(facility, onSelect) {
+        return React.createElement("div", { className: 'result' },
+            React.createElement(components_1.Popover, { position: "top", title: 'Description', content: () => (React.createElement("div", { className: 'facility-tooltip' }, facility.description)) },
+                React.createElement("div", { className: 'image', style: { backgroundImage: `url(${facility.image})` } })),
+            React.createElement("div", { className: 'capacity' }, facility.size + ' pax'),
+            React.createElement("div", { className: 'name' }, facility.name),
+            React.createElement(components_1.AsyncButton, { title: 'Book', onClick: () => __awaiter(this, void 0, void 0, function* () {
+                    setAllFields(Object.assign({}, allFields, { facility, startDate: field.startDateSearch, startTime: field.startTimeSearch, endTime: field.endTimeSearch }));
+                    yield delay(200);
+                    onSelect();
+                }) }));
+    }
+    function renderResults(onSelect) {
+        if (facilities.length == 0)
+            return React.createElement("div", { className: 'nodata' }, "No results found");
+        return React.createElement(React.Fragment, null, facilities.map((f) => renderFacilityResult(f, onSelect)));
+    }
+    function renderHome(wp) {
+        return React.createElement("div", { className: 'home vflex-mt-sb' },
+            React.createElement("div", { className: 'flex-sl-s-mr' },
+                React.createElement(components_1.Input, { className: 'search', value: allFields.query, onChange: updateField.query, placeholder: 'Search Facilities' }),
+                React.createElement(components_1.FilterPanel, null,
+                    React.createElement("div", { style: { margin: '20px' } },
+                        React.createElement(components_1.DatePicker, { date: field.startDateSearch, onChange: updateField.startDateSearch, title: 'Date' })),
+                    React.createElement("div", { style: { margin: '20px' } },
+                        React.createElement(components_1.TimeRangePicker, { title: 'Time', endTime: field.endTimeSearch, startTime: field.startTimeSearch, onChange: (s, e) => {
+                                setAllFields(Object.assign({}, allFields, { startTimeSearch: s, endTimeSearch: e }));
+                            } })))),
+            React.createElement("div", { style: { marginTop: '50px' } }, 'Available ' + (facilities.length == 0 ? '' : ' - ' + facilities.length)),
+            React.createElement("div", { className: 'search-results' }, loadingSearch ? React.createElement(components_1.Loading, null) : renderResults(wp.next)));
+    }
+    /*function renderTimeSelection(wp:IModalWizardStepProps) {
+        return <div className='select-time'>
+            <div className='slot-duration'>
+                <div className='duration'>30-min Slots</div>
+                <div className='slots'>
+                    <div className='slot'>9:30-10:00</div>
+                    <div className='slot'>10:00-10:30</div>
+                    <div className='slot'>10:30-11:00</div>
+                    <div className='slot'>13:345-14:15</div>
+                </div>
+            </div>
+            <div className='slot-duration'>
+                <div className='duration'>1 hour Slots</div>
+                <div className='slots'>
+                    <div className='slot'>9:30-10:30</div>
+                    <div className='slot'>10:00-11:00</div>
+                    <div className='slot'>10:30-11:30</div>
+                </div>
+            </div>
+            <div className='slot-duration'>
+                <div className='duration'>2 hour Slots</div>
+                <div className='slots'>
+                    <div className='slot'>9:30-11:30</div>
+                </div>
+            </div>
+        </div>
+    }*/
+    function renderDateSelection(wp) {
+        return React.createElement("div", { className: 'select-date' },
+            React.createElement("div", null, "Lets confirm the date for your booking"),
+            React.createElement(components_1.DatePicker, { date: field.startDate, onChange: updateField.startDate, title: 'Pick a Date' }));
+    }
+    function renderTimeSelection(wp) {
+        return React.createElement("div", { className: 'select-date' },
+            React.createElement("div", null, "This is the timing for your booking"),
+            React.createElement(components_1.TimeRangePicker, { startTime: field.startTime, endTime: field.endTime, onChange: (s, e) => {
+                    setAllFields(Object.assign({}, allFields, { startTime: s, endTime: e }));
+                }, title: 'Pick a Time Range' }));
+    }
+    function renderAgenda(wp) {
+        return React.createElement("div", { className: 'select-date' },
+            React.createElement("div", null, "Do you have an agenda for this meeting?"),
+            React.createElement(components_1.Input, { value: field.agenda, onChange: updateField.agenda, placeholder: "What's this meeting about?" }));
+    }
+    function renderAHAC(wp) {
+        return React.createElement("div", { className: 'ahac vflex-middle', style: {} },
+            React.createElement("div", { style: { width: '300px', marginLeft: 'auto', marginRight: 'auto' } },
+                React.createElement("div", { className: 'ahac-icon' }),
+                React.createElement("div", { style: { marginBottom: '50px' } }, "Your meeting might extend beyond normal hours. Do you want to request an AC extension?"),
+                React.createElement("div", { className: 'flex-sl-s-mr' },
+                    React.createElement(components_1.Button, { title: 'Skip', onClick: () => {
+                            updateAddons.ahac(false);
+                            wp.next();
+                        } }),
+                    React.createElement(components_1.Button, { title: 'Yes Please', onClick: () => {
+                            updateAddons.ahac(true);
+                            wp.next();
+                        } }))));
+    }
+    let getVisitorSource = props.uxpContext.fromLucyDataCollection('VisitorModel', 'PartnerVisitsInfo');
+    let getVisitors = (max, lastPageToken, args) => {
+        let queryArgs = {};
+        if (args === null || args === void 0 ? void 0 : args.query) {
+            queryArgs = { "VisitorName": { "$regex": '.*' + args.query + '.*', '$options': 'i' } };
+        }
+        return getVisitorSource(max, lastPageToken, queryArgs);
+    };
+    function renderVisitors(wp) {
+        return React.createElement("div", { className: 'visitor-list', style: { width: '500px' } },
+            React.createElement("div", { style: { marginTop: '30px' } },
+                React.createElement("div", { className: 'visitor-icon' }),
+                React.createElement("div", { className: 'lbl', style: { marginBottom: '10px' } }, "Would you like to invite some visitors?"),
+                React.createElement(components_1.DynamicSelect, { selected: null, options: getVisitors, renderOption: (item) => {
+                        console.log(item);
+                        return React.createElement(components_1.ItemCard, { className: 'visitor-item', item: item, nameField: 'VisitorName', titleField: 'VisitorName', subTitleField: 'Email' });
+                    }, labelField: 'VisitorName', onChange: (v) => {
+                        updateAddons.visitors(addons.visitors.concat({ name: v.VisitorName, email: v.Email }));
+                    } })),
+            React.createElement("div", { className: 'selected', style: { display: 'flex', marginTop: '20px' } }, ((addons === null || addons === void 0 ? void 0 : addons.visitors) || []).map((v, vi) => {
+                return React.createElement("div", null,
+                    React.createElement(components_1.Popover, { title: '', content: () => React.createElement(components_1.Button, { title: 'Remove ' + v.name, onClick: () => updateAddons.visitors(addons.visitors.filter((xv) => xv.email != v.email)) }) },
+                        React.createElement(components_1.ProfileImage, { name: v.name })));
+            })));
+    }
+    function renderDateTimeSummary() {
+        let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        let months = ['Jan', 'Feb', 'March', 'April', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+        if (!field.startDate)
+            return null;
+        let s = field.startDate.getDay() + ", " + days[field.startDate.getDay()] + " " + months[field.startDate.getMonth()];
+        if (field.startTime) {
+            s += ' ' + field.startTime.getHours() + ":" + field.startTime.getMinutes();
+            if (field.endTime) {
+                s += ' - ' + field.endTime.getHours() + ":" + field.endTime.getMinutes();
+            }
+        }
+        return s;
+    }
+    function renderSubHeader() {
+        var _a, _b;
+        return React.createElement("div", { className: 'sub-header', style: { backgroundImage: `url(${(_a = field === null || field === void 0 ? void 0 : field.facility) === null || _a === void 0 ? void 0 : _a.image})` } },
+            React.createElement("div", { className: 'label' }, (_b = field === null || field === void 0 ? void 0 : field.facility) === null || _b === void 0 ? void 0 : _b.name));
+    }
+    function submit() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return completeBooking();
+        });
+    }
+    function completeBooking() {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let obj = field.facility;
+                let startDate = new Date(field.startDate);
+                if (!field.startTime) {
+                    alert('No start time has been set');
+                    return;
+                }
+                if (!field.endTime) {
+                    alert('No start time has been set');
+                    return;
+                }
+                startDate.setHours(field.startTime.getHours());
+                startDate.setMinutes(field.startTime.getMinutes());
+                let endDate = new Date(field.startDate);
+                endDate.setHours(field.endTime.getHours());
+                endDate.setMinutes(field.endTime.getMinutes());
+                let r = yield props.uxpContext.executeAction('OfficeRND.MeetingRoomAnalytics', 'BookRoom', {
+                    'id': obj._id,
+                    summary: field.agenda,
+                    starts: startDate.toISOString(),
+                    ends: endDate.toISOString(),
+                    ahac: !!field.ahac,
+                    visitors: field.visitors.map((v) => v.email).join(',')
+                }, { json: true });
+                setSubmission(r);
+                Toast.success("Booking has been confirmed");
+            }
+            catch (e) {
+                Toast.error('' + e);
+            }
+        });
+    }
+    function renderSubmission() {
+        return React.createElement("div", { style: { marginTop: '50px' } }, "Submitted");
+    }
+    function renderSubmissionSummary() {
+        if (submission) {
+            return renderSubmission();
+        }
+        return React.createElement("div", { className: 'summary vflex-middle' },
+            React.createElement("div", { className: 'label', style: { marginBottom: '30px;' } }, "All set. Please review the details on the left and then hit Submit"),
+            React.createElement(components_1.AsyncButton, { title: 'Submit', onClick: submit }));
+    }
+    steps.push({
+        render: (wp) => renderHome(wp),
+        renderStatus: () => { var _a; return React.createElement("div", null, (_a = field === null || field === void 0 ? void 0 : field.facility) === null || _a === void 0 ? void 0 : _a.name); },
+        title: 'Facility',
+        showStatus: false,
+        showNext: false,
+    });
+    steps.push({
+        render: (wp) => renderDateSelection(wp),
+        renderStatus: () => React.createElement("div", null, renderDateTimeSummary()),
+        renderSubHeader,
+        title: 'Date',
+        showStatus: true,
+        showNext: true,
+    });
+    steps.push({
+        render: (wp) => renderTimeSelection(wp),
+        renderStatus: () => null,
+        renderSubHeader,
+        title: 'Time',
+        showStatus: true,
+        showNext: true,
+    });
+    steps.push({
+        render: (wp) => renderAgenda(wp),
+        renderStatus: () => React.createElement("div", null, (field === null || field === void 0 ? void 0 : field.agenda) || ''),
+        renderSubHeader,
+        title: 'Agenda',
+        showStatus: true,
+        showNext: true,
+    });
+    steps.push({
+        render: (wp) => renderAHAC(wp),
+        renderStatus: () => React.createElement("div", null, (addons === null || addons === void 0 ? void 0 : addons.ahac) ? 'Requested' : 'Not Required'),
+        renderSubHeader,
+        title: 'Add-On: Aircon After Hours',
+        showStatus: true,
+        showNext: false,
+    });
+    steps.push({
+        render: (wp) => renderVisitors(wp),
+        renderStatus: () => React.createElement("div", { style: { display: 'flex' } }, ((addons === null || addons === void 0 ? void 0 : addons.visitors) || []).map((v) => React.createElement(components_1.ProfileImage, { name: v.name }))),
+        title: 'Add-On:Visitors',
+        renderSubHeader,
+        showStatus: true,
+        showNext: true,
+    });
+    steps.push({
+        render: (wp) => renderSubmissionSummary(),
+        renderSubHeader,
+        renderStatus: () => null,
+        title: 'Summary',
+        showStatus: true,
+        showNext: false,
+    });
+    return (React.createElement(components_1.ModalWizard, { className: 'room-booking', onClose: () => props.onClose(), onComplete: () => delay(1000), completionText: 'Done', title: 'Book a room', show: true, steps: steps }));
+};
+const RoomBookingAction = (props) => {
+    let [show, setShow] = React.useState(false);
+    return (React.createElement(React.Fragment, null,
+        React.createElement(components_1.WidgetWrapper, null,
+            React.createElement("div", { className: 'action-widget room-action', onClick: () => setShow(true) },
+                React.createElement("div", { className: 'icon fb-icon' }),
+                React.createElement("div", { className: 'lbl' }, "Book a Meeting"))),
+        show &&
+            React.createElement(RoomBookingWizard, { uxpContext: props.uxpContext, onClose: () => setShow(false) })));
+};
 /**
  * Register as a Widget
  */
 uxp_1.registerWidget({
-    id: "space-occupancy-analytics",
-    name: "Space Occupancy Analytics",
-    widget: SpaceOccupancy_1.default,
+    id: "room-booking-action",
+    name: "Room Booking Action",
+    widget: RoomBookingAction,
     configs: {
         layout: {
-            w: 19,
-            h: 12,
+            w: 4,
+            h: 4,
         }
-    },
-    defaultProps: {}
+    }
 });
-uxp_1.registerWidget({
-    id: "space-occupancy-analytics-display",
-    name: "Space Occupancy Analytics",
-    widget: OccupancyCount_1.default,
-    configs: {
-        layout: {
-            w: 19,
-            h: 12,
-        }
-    },
-    defaultProps: {}
+/**
+ * Register as a Sidebar Link
+ */
+uxp_1.registerLink({
+    id: "room-booking-link",
+    label: "Book a Room",
+    // click: () => alert("Hello"),
+    component: RoomBookingWizard,
+    icon: "https://uxp.s3.amazonaws.com/public/images/facility-icon.png"
 });
-uxp_1.registerWidget({
-    id: "space-utilization",
-    name: "Space Utilization",
-    widget: SpaceUtilization_1.default,
-    configs: {
-        layout: {
-            w: 22,
-            h: 12,
-        }
-    },
-    defaultProps: {}
+/**
+ * Register as a UI
+ */
+/*
+registerUI({
+   id:"room_booking",
+   component: Room_bookingWidget
 });
+*/ 
 
-
-/***/ }),
-
-/***/ "./src/level-logo.svg":
-/*!****************************!*\
-  !*** ./src/level-logo.svg ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19.799' height='24.813' viewBox='0 0 19.799 24.813'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23e2e2e2;%7D.b%7Bfill:%23989797;%7D.c%7Bfill:%23424242;%7D%3C/style%3E%3C/defs%3E%3Cpath class='a' d='M3.922,4.922,14,0,9.751,9.751,0,14Z' transform='translate(9.9 5.013) rotate(45)'/%3E%3Cpath class='b' d='M3.922,4.922,14,0,9.751,9.751,0,14Z' transform='translate(9.9 2.507) rotate(45)'/%3E%3Cpath class='c' d='M3.922,4.922,14,0,9.751,9.751,0,14Z' transform='translate(9.9 0) rotate(45)'/%3E%3C/svg%3E"
 
 /***/ }),
 
@@ -11231,8 +10674,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.arraySort = exports.round = exports.debounce = exports.registerUI = exports.registerLink = exports.registerWidget = void 0;
-const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+exports.registerUI = exports.registerLink = exports.registerWidget = void 0;
 const bundle_json_1 = __importDefault(__webpack_require__(/*! ../bundle.json */ "./bundle.json"));
 function registerWidget(_widget) {
     let widget = Object.assign({}, _widget, { id: (bundle_json_1.default.id + '/widget/' + _widget.id).toLowerCase() });
@@ -11263,39 +10705,6 @@ function registerUI(_ui) {
     window.registerUI(ui);
 }
 exports.registerUI = registerUI;
-function debounce(func, wait, immediate) {
-    var timeout = react_1.default.useRef(null);
-    return function executedFunction() {
-        var context = this;
-        var args = arguments;
-        var later = function () {
-            timeout.current = null;
-            if (!immediate)
-                func.apply(context, args);
-        };
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout.current);
-        timeout.current = setTimeout(later, wait);
-        if (callNow)
-            func.apply(context, args);
-    };
-}
-exports.debounce = debounce;
-;
-function round(value, precision) {
-    var multiplier = Math.pow(10, precision || 0);
-    return Math.round(value * multiplier) / multiplier;
-}
-exports.round = round;
-function arraySort(array, key, order) {
-    let compare = (a, b) => (a[key] > b[key]) ? 1 : ((b[key] > a[key]) ? -1 : 0);
-    if (order && order == "DESC") {
-        compare = (a, b) => (a[key] > b[key]) ? -1 : ((b[key] > a[key]) ? 1 : 0);
-    }
-    array.sort(compare);
-    return array;
-}
-exports.arraySort = arraySort;
 
 
 /***/ }),

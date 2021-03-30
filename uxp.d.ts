@@ -325,32 +325,18 @@ declare module "uxp/components" {
      */
     export interface ISelectProps {
         /**
-         * List of items to select from.
-         * Each option has a label which is displayed and a value which is what we actually select.
-         * also you can pass any object as options, then specify the labelField, valueField props
+         * List of items to select from. Each option has a label which is displayed and a value which is what we actually select.
          */
-        options: IOption[] | any[],
-        /**
-         * Name of the field you want to display as label
-         * If not given default(label) will be used
-         */
-        labelField?: string,
-        /**
-         * Name of the field you want to return  as value
-         * If not given default(value) will be used
-         */
-        valueField?: string,
+        options: IOption[],
         /**
          * The  currently selected value
          */
         selected: string,
     
         /**
-         * Gets called whenever the selection changes.
-         * The value parameter has the newly selected value
-         * option parameter has the complete option/ object that you passed
+         * Gets called whenever the selection changes. The value parameter has the newly selected value
          */
-        onChange: (value: string, option?: IOption | any) => void,
+        onChange: (value: string) => void,
     
         /**
          * Text to show when no value is selected
@@ -366,11 +352,6 @@ declare module "uxp/components" {
          */
         isValid?: boolean,
         // inputAttr?: any
-        /**
-         * show hide end of content message
-         */
-        showEndOfContent?: boolean
-    
     }
         
     /**
@@ -406,133 +387,16 @@ declare module "uxp/components" {
     }
         
     /**
-     * @export
-     *
-     * Custom html marker
-     * refer https://docs.eegeo.com/eegeo.js/v0.1.780/docs/leaflet/L.DivIcon/
-     *
-     * @example
-     *  {
-     *       className: 'custom-marker',
-     *       html: '<div>Marker Content</div>
-     *  }
-     */
-    export interface IDivIconInterface {
-        /**
-         * A custom class name to assign to the icon.
-         */
-        className: string,
-        /**
-         * A custom HTML code to put inside the div element.
-         */
-        html: string,
-        /**
-         * Size of the icon in pixels. Can be also set through CSS.
-         */
-        iconSize?: [number, number],
-        /**
-         * The coordinates of the "tip" of the icon (relative to its top left corner).
-         * The icon will be aligned so that this point is at the marker's geographical location.
-         * Centered by default if size is specified, also can be set in CSS with negative margins.
-         */
-        iconAnchor?: [number, number]
-        /**
-         * The coordinates of the point from which popups will "open", relative to the icon anchor.
-         */
-        popupAnchor?: [number, number]
-    }
-        
-    /**
-     * @export
-     * Render tooltip for marker
-     */
-    export interface IRenderMarkerTooltip {
-        /**
-         * content to show in tooltip
-         */
-        content: () => JSX.Element,
-        /**
-         * direction
-         * default is auto
-         */
-        direction?: 'top' | 'bottom' | 'left' | 'right' | 'center' | 'auto',
-        /**
-         * keep showing the tooltip
-         * default is false
-         */
-        keepShowing?: boolean
-    }
-        
-    /**
-     * @export
-     * Render a popup for marker
-     */
-    export interface IRenderMarkerPopup {
-        /**
-         * content to show in popup
-         */
-        content: () => JSX.Element,
-        /**
-         * open the popup on load
-         */
-        showOnLoad?: boolean
-    }
-        
-    /**
      * Represents an individual marker
      * @example
-     *  {
-     *      latitude:0,
-     *      longitude:23.2,
-     *      data:{'name':'FooBar'}
-     *  }
+     * {latitude:0,longitude:23.2,data:{'name':'FooBar'}}
      *
      * @export
      */
     export interface IMarker {
-        /**
-         * latitude
-         */
         latitude: number,
-        /**
-         * longitude
-         */
         longitude: number,
-        /**
-         * any data to return when click on the marker
-         */
-        data?: any,
-        /**
-         * custom HTML marker
-         */
-        customHTMLIcon?: IDivIconInterface,
-        /**
-         * content to display in pop-up
-         */
-        renderPopup?: IRenderMarkerPopup,
-        /**
-         * content to display in tooltip
-         */
-        renderTooltip?: IRenderMarkerTooltip,
-    
-        /**
-         * use image coordinates to calculate bounds
-         */
-        imageCoordinates?: boolean,
-    }
-        
-    /**
-     * @export
-     */
-    export interface ICircleBound {
-        /**
-         * center of the circle
-         */
-        center: [number, number],
-        /**
-         * radius of the circle
-         */
-        radius: number
+        data?: any
     }
         
     /**
@@ -540,39 +404,13 @@ declare module "uxp/components" {
      * Region data for maps
      */
     export interface IRegion {
-        /**
-         * region type,
-         * default is polygon
-         */
-        type?: regionType,
-        /**
-         * region bounds
-         */
+        type?: regionType, // default is polygon
         bounds: IPolygonBound | ICircleBound,
-        /**
-         * show/hide outline of the region
-         */
         hideStroke?: boolean,
-        /**
-         * outline color
-         */
         color?: string,
-        /**
-         * fill color
-         */
         fillColor?: string,
-        /**
-         * any data to return on click a region
-         */
         data?: any,
-        /**
-         * use image coordinates to calculate bounds
-         */
-        imageCoordinates?: boolean,
-        /**
-         * A tooltip to be shown when you click on the region
-         */
-        tooltipContent?: (data: any) => JSX.Element;
+        imageCoordinates?:boolean,
     }
         
     /**
@@ -593,12 +431,6 @@ declare module "uxp/components" {
          * The height of the image in pixels
          */
         height: number;
-        /**
-         * static image bounds
-         * if not provided these will be calculated based on image width and height (NOTE: this may not be accurate)
-         *
-         */
-        bounds?: [[number, number], [number, number]]
     }
         
     /**
@@ -700,8 +532,6 @@ declare module "uxp/components" {
          */
         showOnHover?: boolean
     
-        className?: string
-    
         /**
          * Dropdown button basic example
          *
@@ -728,7 +558,6 @@ declare module "uxp/components" {
          *  </DropDownButton>
          * ```
          */
-    
     
     }
         
@@ -803,16 +632,6 @@ declare module "uxp/components" {
         
     /**
      * @export
-     *
-     * max: page size
-     * last : last page token
-     * args: any args to filter items
-     * args has a default option 'query'. when you type in the search box, search text ill be set to this 'query'
-     */
-    export type IDynamicSelectDataFunction = (max: number, lastPageToken: string, args?: any) => Promise<{ items: Array<any>, pageToken: string }>
-        
-    /**
-     * @export
      * Options that can be passed to a date picker field
      */
     export type ITitleFunc = () => JSX.Element
@@ -830,30 +649,10 @@ declare module "uxp/components" {
     export type MessageBusHook = (context:IContextProvider,channel:string,callback:(payload:string,channel:string)=>string) => void;
         
     /**
-     * @export
-     */
-    export type FieldsHook = (fields:any) =>[any,{[field:string]:(s:any)=>void},any,(s:any)=>void] ;
-        
-    /**
-     * @export
-     */
-    export type IUseUpdateWidgetProps = () => (id: string, props: any) => void
-        
-    /**
      * Um - animations. We need to work on this.
      * @export
      */
     export type IAnimation = 'm-slide-ftr' | 'm-slide-ftl' | 'm-slide-fbr' | 'm-slide-fbl' | 'm-zoom-fc';
-        
-    /**
-     * @export
-     */
-    export type IButtonType = "search" | "close" | "done" | "arrow-up" | "arrow-down" | "arrow-left" | "arrow-right" | "filter" | "edit"| "delete" | "pin" ;
-        
-    /**
-     * @export
-     */
-    export type IButtonSize = "large" | "small";
         
     /**
      * Determines the behaviour of the input field
@@ -865,6 +664,16 @@ declare module "uxp/components" {
      * @export
      */
     export type ISize = "small" | "large";
+        
+    /**
+     * @export
+     */
+    export type IButtonType = "search" | "close" | "done" | "arrow-up" | "arrow-down" | "arrow-left" | "arrow-right" | "filter";
+        
+    /**
+     * @export
+     */
+    export type IButtonSize = "large" | "small";
         
     /**
      * @export
@@ -891,18 +700,13 @@ declare module "uxp/components" {
     /**
      * @export
      */
-    export type regionType = "circle" | "rectangle" | "polygon"
-        
-    /**
-     * @export
-     */
     export type IPolygonBound = LatLngExpression[] | LatLngExpression[][];
         
     /**
      * @export
      * dropdown position
      */
-    export type IDropDownButtonPosition = "right" | "left" | "top left" | "top right" | "top center" | "bottom left" | "bottom right" | "bottom center" | "left center" | "right center";
+    export type IDropDownButtonPosition = "left" | "right";
         /**
      * @export
      * Options that can be passed to a portal container component
@@ -1042,51 +846,6 @@ declare module "uxp/components" {
      *
      */
     export const Modal : React.FunctionComponent<IModalProps>;
-        
-    interface IIconButtonProps {
-        /**
-         * button type
-         */
-        type: IButtonType,
-        /**
-         * Set button to active state when true
-         */
-        active?: boolean,
-        /**
-         * Set button to disabled state when true
-         */
-        disabled?: boolean,
-        /**
-         * The callback that gets invoked when the button is clicked.
-         */
-        onClick?: () => void,
-         /**
-         * Any extra css classes to apply
-         */
-        className?: string,
-         /**
-         * button size. Can be either 'large' or 'small'
-         */
-        size?: IButtonSize
-    
-        /**
-         * set to `true` to prevent a border from being shown for the button
-         */
-        borderless?: boolean;
-    }
-    /**
-     *
-     * @export
-     *
-     * Default set of buttons with icons
-     *
-     * @example
-     * ```
-     *  <IconButton type="search" />
-     * ```
-     *
-     */
-    export const IconButton : React.FunctionComponent<IIconButtonProps>;
         
     interface IFormFieldProps {
         /**Set this to true to have multiple fields in a single horizontal line */
@@ -1252,6 +1011,51 @@ declare module "uxp/components" {
      * @export
      */
     export const Button : React.FunctionComponent<IButtonProps>;
+        
+    interface IIconButtonProps {
+        /**
+         * button type
+         */
+        type: IButtonType,
+        /**
+         * Set button to active state when true
+         */
+        active?: boolean,
+        /**
+         * Set button to disabled state when true
+         */
+        disabled?: boolean,
+        /**
+         * The callback that gets invoked when the button is clicked.
+         */
+        onClick?: () => void,
+         /**
+         * Any extra css classes to apply
+         */
+        className?: string,
+         /**
+         * button size. Can be either 'large' or 'small'
+         */
+        size?: IButtonSize
+    
+        /**
+         * set to `true` to prevent a border from being shown for the button
+         */
+        borderless?: boolean;
+    }
+    /**
+     *
+     * @export
+     *
+     * Default set of buttons with icons
+     *
+     * @example
+     * ```
+     *  <IconButton type="search" />
+     * ```
+     *
+     */
+    export const IconButton : React.FunctionComponent<IIconButtonProps>;
         /**
      * @export
      */
@@ -1605,7 +1409,7 @@ declare module "uxp/components" {
         /**
          * Any extra css classes to apply
          */
-        className?: string,
+        class?: string,
          /**
          * Any custom content to include in the container toolbar.
          */
@@ -1728,15 +1532,7 @@ declare module "uxp/components" {
         /**
          * show/hide end of content message
          */
-        showEndOfContent?: boolean,
-    
-        /**
-         * this function will be called every time list get updated
-         * this will return total number of items (function should return the total count) and loaded items count
-         */
-        onItemsLoad?: (total: number, loaded: number) => void
-    
-    
+        showEndOfContent?: boolean
     }
     /**
      *
@@ -1804,32 +1600,18 @@ declare module "uxp/components" {
      */
     interface ISelectProps {
         /**
-         * List of items to select from.
-         * Each option has a label which is displayed and a value which is what we actually select.
-         * also you can pass any object as options, then specify the labelField, valueField props
+         * List of items to select from. Each option has a label which is displayed and a value which is what we actually select.
          */
-        options: IOption[] | any[],
-        /**
-         * Name of the field you want to display as label
-         * If not given default(label) will be used
-         */
-        labelField?: string,
-        /**
-         * Name of the field you want to return  as value
-         * If not given default(value) will be used
-         */
-        valueField?: string,
+        options: IOption[],
         /**
          * The  currently selected value
          */
         selected: string,
     
         /**
-         * Gets called whenever the selection changes.
-         * The value parameter has the newly selected value
-         * option parameter has the complete option/ object that you passed
+         * Gets called whenever the selection changes. The value parameter has the newly selected value
          */
-        onChange: (value: string, option?: IOption | any) => void,
+        onChange: (value: string) => void,
     
         /**
          * Text to show when no value is selected
@@ -1845,57 +1627,11 @@ declare module "uxp/components" {
          */
         isValid?: boolean,
         // inputAttr?: any
-        /**
-         * show hide end of content message
-         */
-        showEndOfContent?: boolean
-    
     }
     /**
      *
      * A select control to select one item from a list of multiple items
      * @export
-     *
-     *  @example
-     * ```
-     *  // options
-     *  let [selectedOption, setSelectedOption] = React.useState<string>(null)
-     *  let options = [
-     *      {label: "Sri Lanka", value: "SL"},
-     *      {label: "India", value: "IN"},
-     *      {label: "United State", value: "US"},
-     *  ]
-     *
-     *  <Select
-     *      options={options}
-     *      selected={selectedOption}
-     *      onChange={(newValue, option) => {
-     *          setSelectedOption(value)
-     *      }}
-     *  />
-     * ```
-     *
-     * @example
-     * ```
-     *  // options
-     *  let [selectedOption, setSelectedOption] = React.useState<string>(null)
-     *  let options = [
-     *      {name: "Sri Lanka", code: "SL"},
-     *      {name: "India", code: "IN"},
-     *      {name: "United State", code: "US"},
-     *  ]
-     *
-     *  <Select
-     *      options={options}
-     *      labelField="name"
-     *      valueField="code"
-     *      selected={selectedOption}
-     *      onChange={(newValue, option) => {
-     *          setSelectedOption(value)
-     *      }}
-     *  />
-     * ```
-     *
      */
     export const Select : React.FunctionComponent<ISelectProps>;
         
@@ -2290,24 +2026,23 @@ declare module "uxp/components" {
         staticImage?: IStaticImage,
     
         /**
-         * Where the map is centered.
+         * This handler gets called whenever a marker is clicked on.
+         * The first paramater represents the marker element that was clicked on.
+         * The second parameter represents the data associated with the marker
          */
-        center?: { position: IMarker, renderMarker?: boolean },
+        onMarkerClick: (el: any, data: any) => void
     
         /**
          * A list of markers to render.
-         * Each marker has a `latitude` `longitude` and `data` field.
+         * Each marker has a `latitutde` `longitude` and `data` field.
          * The `data` field can store arbitrary data.
          */
-        markers?: IMarker[],
+        markers: IMarker[],
     
         /**
-         * This handler gets called whenever a marker is clicked on.
-         * The first parameter represents the marker element that was clicked on.
-         * The second parameter represents the data associated with the marker
+         * Where the map is centered.
          */
-        onMarkerClick?: (el: any, data: any) => void
-    
+        center?: { position: IMarker, renderMarker?: boolean },
         /**
          * regions to show on map
          */
@@ -2323,27 +2058,9 @@ declare module "uxp/components" {
          */
         zoom?: number,
         /**
-         * max zoom level.
-         * optional. default is 19
-         */
-        maxZoom?: number,
-        /**
-         * min zoom level.
-         * optional. default is -19
-         */
-        minZoom?: number,
-        /**
-         * zoom on scroll
-         * default is false
-         */
-        zoomOnScroll?: boolean
-        /**
          * this handler will get called when the map is clicked
          */
-        onClick?: (event: LeafletMouseEvent) => void,
-    
-        onZoomEnd?: (event: LeafletEvent) => void
-        onDragEnd?: (event: DragEndEvent) => void
+        onClick?: (event: LeafletMouseEvent) => void
     }
     /**
      * A map widget that can show a pannable/zoomable map with markers
@@ -2464,7 +2181,7 @@ declare module "uxp/components" {
         */
         onChange: (start: Date, end: Date) => void,
         /**
-       * Set to true to prevent a user from typing in a time
+       * Set to true to prevent a user from typing in a date
        */
         disableInput?: boolean
     }
@@ -2496,7 +2213,7 @@ declare module "uxp/components" {
          */
         onChange: (date: Date) => void,
         /**
-        * Set to true to prevent a user from typing in a datetime
+        * Set to true to prevent a user from typing in a date
         */
         disableInput?: boolean
     
@@ -2548,7 +2265,7 @@ declare module "uxp/components" {
          * pagination will be supported.
          * The function expects 2 parameters - max and last and returns a promise that will resolve to the list of objects. max specifies the maximum number of items to be returned.
          */
-        options: IDynamicSelectDataFunction,
+        options: IDataFunction,
         /**
          * selected option label
          */
@@ -2599,11 +2316,7 @@ declare module "uxp/components" {
          *
          */
         timeout?: number,
-        type?: "search-box" | "select-box",
-        /**
-         * show hide end of content message
-         */
-        showEndOfContent?: boolean
+        type?: "search-box" | "select-box"
     }
     /**
      *
@@ -2739,14 +2452,6 @@ declare module "uxp/components" {
          * show/hide end of content message
          */
         showEndOfContent?: boolean
-    
-        /**
-       * this function will be called every time list get updated
-       * this will return total number of items (function should return the total count) and loaded items count
-       */
-        onItemsLoad?: (total: number, loaded: number) => void
-    
-        renderHeaders?: boolean
     }
     /**
      *
@@ -2780,8 +2485,6 @@ declare module "uxp/components" {
          */
         showOnHover?: boolean
     
-        className?: string
-    
         /**
          * Dropdown button basic example
          *
@@ -2809,84 +2512,12 @@ declare module "uxp/components" {
          * ```
          */
     
-    
     }
     /**
      * This component wraps another component and shows a tooltip for the component it is wrapping, whenever the user moves the mouse over it.
      * @export
      */
     export const DropDownButton : React.FunctionComponent<IDropDownButtonProps>;
-        
-    interface IHSListProps {
-        /**
-         * Array of items
-         */
-        items: any[],
-        /**
-         * render method for an item given above
-         */
-        renderItem: (item: any, key: number) => JSX.Element
-        /**
-         * number of items to scroll when click on controller buttons
-         */
-        scrollStep?: number
-        /**
-         * additional css class names
-         */
-        className?: string
-    }
-    /**
-     * This widget will create a horizontal scroll-able list
-     *
-     * @example
-     * ```
-     *  <HorizontalScrollList
-     *      items={[...Array(15).keys()]}
-     *      renderItem={(item, key) => {
-     *      return (<div className="item-thumbnail">
-     *              {key}
-     *          </div>)
-     *      }}
-     *  />
-     * ```
-     * @export
-     */
-    export const HorizontalScrollList : React.FunctionComponent<IHSListProps>;
-        
-    interface ILinkButtonWidgetProps {
-        /**
-         * link url
-         */
-        link: string,
-        /**
-         * target for link
-         * default is _self
-         */
-        target?: "_self" | "_blank" | "_parent"
-        /**
-         * icon to show
-         */
-        icon: string,
-        /**
-         * label for link
-         */
-        label: string
-    }
-    /**
-     * This widget will give a simple widget with configurable option to create a link button
-     *
-     * @example
-     * ```
-     *  <LinkButtonWidget
-     *      link="https://google.com"
-     *      target="_blank"
-     *      icon="path to your icon"
-     *      label="Go to Google"
-     *  />
-     * ```
-     * @export
-     */
-    export const LinkButtonWidget : React.FunctionComponent<ILinkButtonWidgetProps>;
         
     interface IWizardProps {
         /**
@@ -2910,5 +2541,5 @@ declare module "uxp/components" {
      * @export
      */
     export const Wizard : React.FunctionComponent<IWizardProps>;
-        export const useToast:ToastHook;    export const useResizeEffect:ResizeEffectHook;    export const useMessageBus:MessageBusHook;    export const useFields:FieldsHook;    export const useUpdateWidgetProps:IUseUpdateWidgetProps;
+        export const useToast:ToastHook;    export const useResizeEffect:ResizeEffectHook;    export const useMessageBus:MessageBusHook;    export const useFields:FieldsHook;
 }

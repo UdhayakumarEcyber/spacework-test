@@ -1,5 +1,4 @@
 
-import React from 'react';
 import BundleConfig from '../bundle.json';
 
 // window interface
@@ -41,8 +40,7 @@ interface IWidgetObject {
     description?: string,
     icon?: string,
     vendor?: string,
-    tags?: string[],
-    defaultProps?: { [key: string]: any }
+    tags?: string[]
 }
 type SidebarLinkClick = () => void;
 
@@ -97,9 +95,10 @@ interface ILucyActionExecutionOptions {
 }
 
 export interface IContextProvider extends IPartialContextProvider {
-    executeAction: (model: string, action: string, parameters: any, options?: ILucyActionExecutionOptions) => Promise<any>;
+    executeAction:(model:string, action:string, parameters:any,options?:ILucyActionExecutionOptions) => Promise<any>;
     fireEvent: (eventID: string) => Promise<void>;
     hasAppRole: (roles: string | string[]) => Promise<boolean>;
+    fromLucyDataCollection:(model: string, collection: string) => any;
 }
 
 export function registerWidget(_widget: IWidgetObject) {
@@ -128,41 +127,4 @@ export function registerUI(_ui: IRenderUIItemProps) {
     }
     console.log('registering link....', ui.id);
     window.registerUI(ui);
-}
-
-export function debounce(func: Function, wait: number, immediate?: boolean) {
-    var timeout: any = React.useRef(null);
-
-    return function executedFunction() {
-        var context = this;
-        var args = arguments;
-
-        var later = function () {
-            timeout.current = null;
-            if (!immediate) func.apply(context, args);
-        };
-
-        var callNow = immediate && !timeout;
-
-        clearTimeout(timeout.current);
-
-        timeout.current = setTimeout(later, wait);
-
-        if (callNow) func.apply(context, args);
-    };
-};
-
-export function round(value: number, precision: number) {
-    var multiplier = Math.pow(10, precision || 0);
-    return Math.round(value * multiplier) / multiplier;
-}
-
-export function arraySort(array: any[], key: string, order?: "ASC" | "DESC",): any[] {
-    let compare = (a: any, b: any) => (a[key] > b[key]) ? 1 : ((b[key] > a[key]) ? -1 : 0)
-    if (order && order == "DESC") {
-        compare = (a: any, b: any) => (a[key] > b[key]) ? -1 : ((b[key] > a[key]) ? 1 : 0)
-    }
-
-    array.sort(compare)
-    return array
 }
