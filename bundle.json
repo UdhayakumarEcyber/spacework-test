@@ -1,0 +1,21 @@
+{
+    "id":"a45e642b-4828-4420-8c26-ba1051752805",
+    "author":"eutech",
+    "widgets":[
+        {
+            "id":"space-occupancy-analytics",
+            "title":"Space Occupancy Analytics",
+            "description":"Occupancy visualizations for spaces"
+        },
+        {
+            "id":"space-occupancy-analytics-display",
+            "title":"Space Occupancy Analytics Display",
+            "description":"Occupancy visualizations for spaces"
+        },
+        {
+            "id":"space-utilization",
+            "title":"Space Utilization",
+            "description":"Occupancy visualizations for spaces"
+        }
+    ]
+}
